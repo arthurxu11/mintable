@@ -24,7 +24,8 @@ export default async () => {
 
     for (const accountId in config.accounts) {
         const accountConfig = config.accounts[accountId]
-
+        
+        logInfo(`Fetching transactions from ${startDate.toISOString()} to ${endDate.toISOString()}.`)
         logInfo(`Fetching account ${accountConfig.id} using ${accountConfig.integration}.`)
 
         switch (accountConfig.integration) {
